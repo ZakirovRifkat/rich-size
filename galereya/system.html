@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ru" data-photos="../assets/photos/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Дизайн-система «Галерея» — Rich Size</title>
+<meta name="description" content="Женская одежда размеров 50–60 от Rich Size: магазины в Алматы, Астане, Шымкенте, Атырау и Актау, доставка по Казахстану.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Geologica:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5.5 8.5h13l-1 12h-11l-1-12Z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m15.5 15.5 4 4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M5 19.5 6.1 16A7.5 7.5 0 1 1 8.6 18.5L5 19.5Z"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol>
+</svg>
+
+<header class="head" data-head>
+  <div class="head__row">
+    <nav class="nav" aria-label="Основное">
+      <a class="hot" href="catalog.html" data-i18n="new">Новинки</a>
+      <a href="catalog.html" data-i18n="catalog">Каталог</a>
+      <a href="catalog.html?cat=evening" data-cat-name="evening">Вечерние</a>
+      <a href="index.html#stores" data-i18n="stores">Магазины</a>
+    </nav>
+    <button class="icon-btn menu-btn" data-menu-open data-i18n-aria="menu" aria-label="Меню"><svg class="icon"><use href="#i-menu"/></svg></button>
+    <a class="mark" href="index.html" aria-label="Rich Size — на главную">RICH SIZE</a>
+    <div class="tools">
+      <div class="lang" role="group" aria-label="Язык"><button data-lang="kk" aria-pressed="false">ҚАЗ</button><button data-lang="ru" aria-pressed="true">РУС</button></div>
+      <button class="caps size-trigger" data-toggle="size-pop" aria-expanded="false"><span data-i18n="size">Размер</span> <b data-size-current>—</b></button>
+      <button class="icon-btn" data-i18n-aria="search" aria-label="Поиск"><svg class="icon"><use href="#i-search"/></svg></button>
+      <button class="icon-btn" data-cart-open data-i18n-aria="cart" aria-label="Корзина"><svg class="icon"><use href="#i-bag"/></svg><span class="count" data-cart-count hidden>0</span></button>
+    </div>
+  </div>
+  <div class="size-pop" id="size-pop" data-popover hidden>
+    <p data-kk="Өлшеміңізді бір рет таңдаңыз — каталог тек сізге келетін заттарды көрсетеді.">Выберите размер один раз — каталог покажет только вещи этого размера.</p>
+    <div class="size-row" role="group" aria-label="Размер">
+      <button data-size-set="50">50</button><button data-size-set="52">52</button><button data-size-set="54">54</button><button data-size-set="56">56</button><button data-size-set="58">58</button><button data-size-set="60">60</button>
+    </div>
+  </div>
+</header>
+
+<main class="sys">
+  <div class="sys__intro">
+    <h1>Дизайн-система Rich Size<br>вариант «Галерея»</h1>
+    <p>Фото занимают экран от края до края. Интерфейс собран из одного шрифта, тонких линий и белого фона, цвета в нём почти нет. У каждой вещи указаны рост модели и размер на ней.</p>
+  </div>
+
+  <section class="sys-sec">
+    <h2>Фирменные детали<small>Чем Rich Size отличается от Lichi. Крупно видна только арка, остальные детали мелкие.</small></h2>
+    <div>
+      <div class="sig">
+        <div class="sig__item"><b>Арка</b><p>Повторяет арки в студии магазина. Фото первого экрана раскрываются аркой снизу вверх, второе фото карточки раскрывается аркой при наведении. Без движения арка стоит один раз: на главной у фото «Магазины» и «Доставка и оплата» верх скруглён, как у дверной арки студии. Других арок нет.</p></div>
+        <div class="sig__item"><b>Два языка в подписях</b><p>Как в постах магазина: «Белдемше | Юбка». На фото — русская строка и тонкая казахская под ней; в карточке товара — название на втором языке.</p><span class="cap sig__cap"><span class="cap__main">Вечерние платья к&nbsp;тою</span><span class="cap__sub">Тойға арналған кешкі көйлектер</span></span></div>
+        <div class="sig__item"><b>Сколько вещей в размере</b><p>Под каждым размером написано, сколько в нём вещей. После выбора: «В размере 56 — 20 вещей».</p></div>
+        <div class="sig__item"><b>Полоска размеров</b><p>На карточке видно, какие размеры есть. Недоступные зачёркнуты, ваш — бордовый с линией.</p><ul class="card__sizes sig__strip"><li>50</li><li>52</li><li data-off>54</li><li data-mine>56</li><li>58</li><li data-off>60</li></ul></div>
+        <div class="sig__item"><b>Живой статус магазинов</b><p>По времени Алматы: «Открыто до 22:00» или «Закрыто, откроется в 10:00».</p><span class="store-status">Открыто до 22:00</span></div>
+        <div class="sig__item"><b>Без капса</b><p>Капсом набрано только меню. Заголовки, кнопки и метки — обычным регистром.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sys-sec">
+    <h2>Цвет<small>На 95% интерфейс состоит из нейтральных цветов. Бордовый — единственный акцент, меньше 3% экрана.</small></h2>
+    <div>
+      <div class="sys-block">
+        <p class="sys-sub">Ink — тёплые нейтральные цвета для текста, линий и фона.</p>
+        <div class="scale" data-scale="ink"></div>
+      </div>
+      <div class="sys-block">
+        <p class="sys-sub">Wine — акцент для ссылки «Новинки», цены со скидкой и отметки вашего размера.</p>
+        <div class="scale scale--10" data-scale="wine"></div>
+      </div>
+      <div class="sys-block">
+        <p class="sys-sub">Цвета по ролям, контраст посчитан на белом фоне.</p>
+        <div class="roles" data-roles></div>
+      </div>
+      <div class="sys-block">
+        <p class="sys-sub">Пропорция на экране: белый, текст и линии, фото, акцент.</p>
+        <div class="share"><i style="--c:var(--ink-0);--w:52%;box-shadow:inset 0 0 0 1px var(--line)"></i><i style="--c:var(--ink-200);--w:8%"></i><i style="--c:var(--ink-900);--w:7%"></i><i style="--c:#b9a089;--w:31%"></i><i style="--c:var(--wine-700);--w:2%"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sys-sec">
+    <h2>Шрифт<small>Geologica — один шрифт на всё, с полной кириллицей и казахскими буквами. Размеров четыре: 12, 14, 24–32 и 40–64. Cinzel — только логотип.</small></h2>
+    <div>
+      <div class="type-row"><code>Логотип, Cinzel 22, вне шкалы</code><span class="mark" style="padding-left:0">RICH SIZE</span></div>
+      <div class="type-row"><code>Витрина, 40–64 / 200: только цифры размеров</code><span style="font-size:var(--fs-xl);font-weight:200;line-height:1" class="num">56</span></div>
+      <div class="type-row"><code>Заголовок, 24–32 / 300: разделы, название товара, подписи на фото</code><span style="font-size:var(--fs-l);font-weight:300;line-height:1.15">Вечерние платья к тою</span></div>
+      <div class="type-row"><code>Текст, 14 / 400: интерфейс, абзацы, второй язык на фото</code><span>Классический жакет. Әсем көйлек — өлшемі 56, бойы 165.</span></div>
+      <div class="type-row"><code>Текст, 14 / 500: цена и меню капсом</code><span class="num" style="font-weight:500">24&#8239;950&nbsp;₸ <span class="caps" style="margin-left:var(--s-4)">Новинки</span></span></div>
+      <div class="type-row"><code>Подпись, 12 / 400</code><span style="font-size:var(--fs-s);color:var(--text-3)">Модель: рост 165, размер 56–58</span></div>
+    </div>
+  </section>
+
+  <section class="sys-sec">
+    <h2>Отступы и сетка<small>Шаг 4 px. Края страницы 28 px (16 px на телефоне), между фото 4 px, фото 3:4.</small></h2>
+    <div class="spacing">
+      <div><span>4</span><i style="--w:4px"></i></div><div><span>8</span><i style="--w:8px"></i></div><div><span>12</span><i style="--w:12px"></i></div><div><span>16</span><i style="--w:16px"></i></div><div><span>24</span><i style="--w:24px"></i></div><div><span>32</span><i style="--w:32px"></i></div><div><span>48</span><i style="--w:48px"></i></div><div><span>64</span><i style="--w:64px"></i></div><div><span>96</span><i style="--w:96px"></i></div><div><span>128</span><i style="--w:128px"></i></div>
+    </div>
+  </section>
+
+  <section class="sys-sec">
+    <h2>Шапка<small>Высота 72 px, логотип по центру. На главной — прозрачная поверх фото, после прокрутки белая с линией.</small></h2>
+    <div class="head-demo"><div class="head__row"><nav class="nav"><a class="hot" href="#">Новинки</a><a href="#">Каталог</a><a href="#">Вечерние</a></nav><span class="mark">RICH SIZE</span><div class="tools"><div class="lang"><button aria-pressed="false">ҚАЗ</button><button aria-pressed="true">РУС</button></div><span class="caps">Размер <b>56</b></span><svg class="icon"><use href="#i-search"/></svg><svg class="icon"><use href="#i-bag"/></svg></div></div></div>
+  </section>
+
+  <section class="sys-sec">
+    <h2>Кнопки и ссылки<small>Одна залитая кнопка на экран. Квадратные углы, 48 px высоты, текст 14 px обычным регистром.</small></h2>
+    <div>
+      <div class="demo-row">
+        <div><button class="btn">Добавить в корзину</button><span class="demo-label">Основная</span></div>
+        <div><button class="btn btn--line">Заказать через WhatsApp</button><span class="demo-label">Контурная</span></div>
+        <div><button class="btn" data-state="need-size">Выберите размер</button><span class="demo-label">Размер не выбран</span></div>
+      </div>
+      <div class="demo-row" style="margin-top:var(--s-5)">
+        <div><button class="btn" data-loading>Добавить</button><span class="demo-label">Загрузка</span></div>
+        <div><button class="btn" disabled>Нет в наличии</button><span class="demo-label">Недоступна</span></div>
+        <div><a class="text-link" href="#">Смотреть всё</a><span class="demo-label">Текстовая ссылка</span></div>
+        <div><a class="ask" href="#"><svg class="icon"><use href="#i-chat"/></svg><span>Спросить стилиста в WhatsApp</span></a><span class="demo-label">Связь со стилистом</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sys-sec">
+    <h2>Размер<small>Выбор хранится и действует на всём сайте. Попробуйте — карточки ниже отреагируют.</small></h2>
+    <div>
+      <div class="sys-block">
+        <p class="sys-sub">На главной размер выбирают под заголовком «Выберите размер», размеры набраны крупно.</p>
+        <div class="big-sizes" style="justify-content:flex-start" role="group" aria-label="Размер"><button data-size-set="50" data-size-toggle>50<small data-size-count="50"></small></button><button data-size-set="52" data-size-toggle>52<small data-size-count="52"></small></button><button data-size-set="54" data-size-toggle>54<small data-size-count="54"></small></button><button data-size-set="56" data-size-toggle>56<small data-size-count="56"></small></button><button data-size-set="58" data-size-toggle>58<small data-size-count="58"></small></button><button data-size-set="60" data-size-toggle>60<small data-size-count="60"></small></button></div>
+        <p class="size-state" data-size-state style="margin-top:var(--s-5)"></p>
+      </div>
+      <div class="sys-block">
+        <p class="sys-sub">В шапке размер выбирают в выпадающей панели.</p>
+        <div class="size-row" style="max-width:360px" role="group" aria-label="Размер"><button data-size-set="50">50</button><button data-size-set="52">52</button><button data-size-set="54">54</button><button data-size-set="56">56</button><button data-size-set="58">58</button><button data-size-set="60">60</button></div>
+      </div>
+      <div class="sys-block">
+        <p class="sys-sub">В карточке товара недоступные размеры зачёркнуты, точка отмечает ваш размер, линия — выбранный.</p>
+        <div class="pdp-sizes" style="max-width:380px"><button class="size-btn">50</button><button class="size-btn" disabled>52</button><button class="size-btn" aria-pressed="true">54</button><button class="size-btn" data-mine>56</button><button class="size-btn">58</button><button class="size-btn" disabled>60</button></div>
+        <div class="fit-line"><span>Рост модели <b>165&nbsp;см</b></span><span>Размер на модели <b>56–58</b></span></div>
+      </div>
+      <div class="sys-block">
+        <p class="sys-sub">В таблице размеров только числа и тонкие линии.</p>
+        <div class="sc" style="max-width:520px" data-size-chart></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sys-sec">
+    <h2>Карточка товара<small>Фото 3:4, под ним по центру: название, цена, полоска размеров, рост и размер модели. Второе фото раскрывается аркой при наведении. Звёздочка отмечает цену, размеры и данные модели, взятые для примера.</small></h2>
+    <div class="grid" data-products="ids:jacket-leather,blouse-red,dress-lace"></div>
+  </section>
+
+  <section class="sys-sec">
+    <h2>Цвет и формы<small>Кружки цвета, переключатель, сортировка, вкладки, поле ввода.</small></h2>
+    <div>
+      <div class="demo-row">
+        <div class="swatches"><button class="swatch" style="--c:#151414" aria-pressed="true" aria-label="чёрный"></button><button class="swatch" style="--c:#5B1A24" aria-pressed="false" aria-label="бордовый"></button><button class="swatch" style="--c:#A9C1D9" aria-pressed="false" aria-label="голубой"></button><button class="swatch" style="--c:#E7B9BF" aria-pressed="false" aria-label="розовый"></button></div>
+        <button class="check" aria-pressed="true"><i></i>Только в размере 56</button>
+        <button class="check" disabled><i></i>Только в размере —</button>
+        <select class="select" aria-label="Сортировка"><option>Сначала новые</option><option>Сначала дешевле</option></select>
+      </div>
+      <div class="sys-block">
+        <div class="cats" style="max-width:640px"><button aria-pressed="true">Все</button><button>Вечерние</button><button>Платья</button><button>Костюмы</button><button>Жакеты</button></div>
+      </div>
+      <div class="sys-block demo-row" style="align-items:start">
+        <div class="field"><label for="ph">Телефон</label><input id="ph" inputmode="tel" placeholder="+7 7__ ___ __ __"><small>Пришлём подтверждение в WhatsApp</small></div>
+        <div class="field" data-error><label for="ph2">Телефон</label><input id="ph2" value="+7 747 514" aria-invalid="true" aria-describedby="ph2e"><small id="ph2e">Введите номер полностью: 11 цифр, начиная с +7.</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sys-sec">
+    <h2>Корзина<small>Открывается шторкой справа. В ней итог, рассрочка Kaspi, одна кнопка оформления и заказ через WhatsApp.</small></h2>
+    <div class="demo-box" style="max-width:420px">
+      <div class="line-item" style="border-top:0;padding-top:0"><img src="../assets/photos/brown-coat.jpg" alt=""><div><div class="line-item__name">Пальто прямого кроя</div><div class="line-item__meta">Размер 56, коричневый</div><div class="stepper"><button aria-label="Меньше"><svg class="icon" style="width:14px;height:14px"><use href="#i-minus"/></svg></button><span>1</span><button aria-label="Больше"><svg class="icon" style="width:14px;height:14px"><use href="#i-plus"/></svg></button></div></div><div class="line-item__side"><span class="num">45&#8239;950&nbsp;₸</span><button>Удалить</button></div></div>
+      <div class="total" style="margin-top:var(--s-4)"><span>Итого</span><b>45&#8239;950&nbsp;₸</b></div>
+      <div class="kaspi-line" style="font-size:var(--fs-s);color:var(--text-2);margin:var(--s-1) 0 var(--s-4)">Kaspi: 3&#8239;829 ₸/мес. × 12</div>
+      <button class="btn">Оформить заказ</button>
+    </div>
+  </section>
+
+  <section class="sys-sec">
+    <h2>Фото<small>Правила взяты из съёмки, которую магазин уже публикует в Instagram.</small></h2>
+    <ul class="rules">
+      <li>Студия: белые стены с лепниной, арки, паркет ёлкой, тёплый дневной свет.</li>
+      <li>Модель во весь рост, кадр 3:4, голова в верхней трети. Второй кадр — деталь или движение.</li>
+      <li>Под каждым фото товара — рост модели и её размер.</li>
+      <li>Никаких плашек поверх фото. На фото-баннерах — только название раздела на двух языках, на карточке — только метка «Новинка» в углу.</li>
+      <li>Все кадры одного товара сняты на одном фоне. Коллажи и рамки не ставятся.</li>
+    </ul>
+  </section>
+
+  <section class="sys-sec">
+    <h2>Голос<small>Коротко, по делу, на двух языках. Размер называется только числом.</small></h2>
+    <div class="do-dont">
+      <div><h3>Пишем</h3><ul><li>«Размер 56», «есть в 50–60»</li><li>«Рост модели 165, на ней 56–58»</li><li>«Спросить стилиста в WhatsApp»</li><li>Казахский и русский — одинаково полно</li></ul></div>
+      <div><h3>Не пишем</h3><ul><li>«Большие размеры», «батал», «для полных»</li><li>«Стройнит», «скрывает недостатки»</li><li>«Цена в директ»</li><li>Таймеры, «успей купить», всплывающие окна</li></ul></div>
+    </div>
+  </section>
+</main>
+
+<script>
+  // Render colour scales and roles from the live CSS tokens.
+  (function () {
+    const css = getComputedStyle(document.documentElement);
+    const hex = (v) => css.getPropertyValue(v).trim();
+    const lum = (h) => { const c = h.replace('#', '').match(/../g).map((x) => parseInt(x, 16) / 255).map((v) => v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4)); return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]; };
+    const ratio = (a, b) => { const x = lum(a), y = lum(b); return ((Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05)).toFixed(1); };
+    const steps = { ink: [0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900], wine: [50, 100, 200, 300, 400, 500, 600, 700, 800, 900] };
+    document.querySelectorAll('[data-scale]').forEach((box) => {
+      const name = box.dataset.scale;
+      box.innerHTML = steps[name].map((s) => { const h = hex('--' + name + '-' + s); return '<div class="chip-c"><i style="--c:' + h + '"></i><b>' + s + '</b><span>' + h.toUpperCase() + '</span></div>'; }).join('');
+    });
+    const roles = [['--text', 'Текст'], ['--text-2', 'Вторичный текст'], ['--text-3', 'Подписи'], ['--line', 'Линии'], ['--bg-sunk', 'Подложка фото'], ['--accent', 'Акцент'], ['--ok', 'Есть в наличии'], ['--error', 'Ошибка']];
+    const box = document.querySelector('[data-roles]');
+    if (box) box.innerHTML = roles.map(([v, n]) => { let h = hex(v); if (h.startsWith('var(')) h = hex(h.slice(4, -1)); return '<div class="role"><i style="--c:' + h + '"></i><div>' + n + '<span>' + h.toUpperCase() + ' · ' + ratio(h, '#ffffff') + ':1</span></div></div>'; }).join('');
+  })();
+</script>
+
+<footer class="foot">
+  <div class="foot__grid">
+    <div><h2 class="foot-h" data-i18n="catalog">Каталог</h2><ul>
+      <li><a href="catalog.html?cat=evening" data-cat-name="evening">Вечерние</a></li>
+      <li><a href="catalog.html?cat=dresses" data-cat-name="dresses">Платья</a></li>
+      <li><a href="catalog.html?cat=suits" data-cat-name="suits">Костюмы</a></li>
+      <li><a href="catalog.html?cat=jackets" data-cat-name="jackets">Жакеты</a></li>
+      <li><a href="catalog.html?cat=outer" data-cat-name="outer">Верхняя одежда</a></li>
+    </ul></div>
+    <div id="foot-delivery"><h2 class="foot-h" data-kk="Сатып алушыларға">Покупателям</h2><ul>
+      <li data-kk="Қала бойынша — Яндекс Такси">По городу — Яндекс Такси</li>
+      <li data-kk="Қазақстан бойынша — Қазпошта, inDrive">По Казахстану — Казпочта, inDrive</li>
+      <li data-kk="Kaspi бөліп төлеу">Рассрочка Kaspi</li>
+      <li><a href="system.html" data-kk="Дизайн-жүйе">Дизайн-система</a></li>
+    </ul></div>
+    <div><h2 class="foot-h" data-kk="Байланыс">Связь</h2><ul>
+      <li><a href="#" data-wa="Здравствуйте!" style="white-space:nowrap">WhatsApp 8&nbsp;747&nbsp;514&nbsp;39&nbsp;85</a></li>
+      <li><a href="https://www.instagram.com/richsizekz/" target="_blank" rel="noopener">Instagram</a></li>
+      <li data-kk="Алматы: күн сайын 22:00-ге дейін">Алматы: ежедневно до 22:00</li>
+    </ul></div>
+    <div><h2 class="foot-h" data-kk="Өлшемдер">Размеры</h2><ul>
+      <li data-kk="Біз 50–60 өлшемдерге тігеміз">Мы шьём для размеров 50–60</li>
+      <li><a class="u" href="product.html?id=jacket-leather#sizes" data-i18n="sizeChart">Таблица размеров</a></li>
+    </ul></div>
+    <div id="foot-stores"><h2 class="foot-h" data-i18n="stores">Магазины</h2><ul class="stores-list" data-stores></ul></div>
+  </div>
+  <div class="foot__base"><span>© Rich Size, 2026</span><span data-kk="* баға, өлшемдер мен модель деректері — макетке арналған мысал. Фотолар — @richsizekz Instagram-нан, уақытша.">* цена, размеры и данные модели — пример для макета. Фото — из Instagram @richsizekz, временно.</span></div>
+</footer>
+
+<div class="scrim" data-scrim></div>
+<aside class="drawer" data-cart aria-label="Корзина">
+  <div class="drawer__head"><span data-i18n="cart">Корзина</span><button class="icon-btn" data-cart-close data-i18n-aria="close" aria-label="Закрыть"><svg class="icon"><use href="#i-close"/></svg></button></div>
+  <div class="drawer__body">
+    <div class="cart-empty" data-cart-empty><b data-i18n="empty">Корзина пуста</b><p data-i18n="emptyHint">Выберите размер и добавьте вещь — она появится здесь.</p><a class="text-link" href="catalog.html" data-kk="Каталогқа өту">Перейти в каталог</a></div>
+    <div data-cart-list></div>
+  </div>
+  <div class="drawer__foot" data-cart-full hidden>
+    <div class="total"><span data-i18n="total">Итого</span><b data-cart-total>0 ₸</b></div>
+    <div class="kaspi-line">Kaspi: <span data-cart-kaspi></span></div>
+    <a class="btn" href="#" data-i18n="checkout">Оформить заказ</a>
+    <a class="ask" href="#" data-cart-wa target="_blank" rel="noopener"><svg class="icon"><use href="#i-chat"/></svg><span data-i18n="checkoutWa">Заказать через WhatsApp</span></a>
+  </div>
+</aside>
+<aside class="drawer drawer--left" data-menu aria-label="Меню">
+  <div class="drawer__head"><span class="mark" style="font-size:var(--fs-m)">RICH SIZE</span><button class="icon-btn" data-menu-close data-i18n-aria="close" aria-label="Закрыть"><svg class="icon"><use href="#i-close"/></svg></button></div>
+  <div class="drawer__body"><ul class="menu-list">
+    <li><a class="hot" href="catalog.html" data-i18n="new">Новинки</a></li>
+    <li><a href="catalog.html" data-i18n="catalog">Каталог</a></li>
+    <li><a href="catalog.html?cat=evening" data-cat-name="evening">Вечерние</a></li>
+    <li><a href="catalog.html?cat=suits" data-cat-name="suits">Костюмы</a></li>
+    <li><a href="#stores" data-i18n="stores">Магазины</a></li>
+    <li><button class="text-link" style="border:0;font-size:var(--fs-m);text-transform:none;min-height:56px" data-toggle="size-pop"><span data-i18n="yourSize">Ваш размер</span>: <span data-size-current>—</span></button></li>
+  </ul><div class="lang menu-lang" role="group" aria-label="Язык"><button data-lang="kk" aria-pressed="false">Қазақша</button><button data-lang="ru" aria-pressed="true">Русский</button></div></div>
+</aside>
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+
+<template id="tpl-card"><a class="card" data-slot="link"><div class="card__media"><img data-slot="img" src="../assets/photos/black-blazer.jpg" alt=""><img data-slot="img2" src="../assets/photos/black-blazer-portrait.jpg" alt=""><span class="badge" data-slot="badge"></span></div><div class="card__body"><div class="card__name" data-slot="name"></div><div class="card__price"><span data-slot="price"></span><s data-slot="old"></s></div><ul class="card__sizes" data-slot="size-list" aria-label="Размеры"></ul><div class="card__fit" data-slot="fit"></div><div class="card__fit card__fit--short" data-slot="fit-short"></div></div></a></template>
+<template id="tpl-cart-item"><div class="line-item"><img data-slot="img" src="../assets/photos/black-blazer.jpg" alt=""><div><div class="line-item__name" data-slot="name"></div><div class="line-item__meta" data-slot="meta"></div><div class="stepper"><button data-qty-dec aria-label="Меньше"><svg class="icon" style="width:14px;height:14px"><use href="#i-minus"/></svg></button><span data-slot="qty"></span><button data-qty-inc aria-label="Больше"><svg class="icon" style="width:14px;height:14px"><use href="#i-plus"/></svg></button></div></div><div class="line-item__side"><span data-slot="price"></span><button data-remove data-i18n="remove">Удалить</button></div></div></template>
+<template id="tpl-store"><li><b data-slot="city"></b><span data-slot="addr"></span><span class="store-status" data-slot="status"></span></li></template>
+
+<script src="../shared/products.js"></script>
+<script src="../shared/app.js"></script>
+</body>
+</html>
